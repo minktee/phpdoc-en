@@ -3,10 +3,10 @@
  <chapter xml:id="internals2.variables" xmlns="http://docbook.org/ns/docbook">
   <title>Working with variables</title>
   <section xml:id="internals2.variables.intro">
-   <title>Intro</title>
+   <title>Introduction</title>
    <para>
     For working with variables in PHP's core you have to learn about different
-    fundamental concepts used in PHP. Firstly PHP is a dynamic and weak typed
+    fundamental concepts used in PHP: Firstly PHP is a dynamic and weak typed
     language. Secondly PHP uses a copy on write mechanism with reference
     counting for memory handling. Please check the <xref
      linkend="features.gc.refcounting-basics"/> chapter for details how
@@ -72,7 +72,8 @@ struct _zval_struct {
     <code>zval</code>s and even pointers to pointers to <code>zval</code>s, for 
     most of them there are shortcuts dereferencing these pointers. These macros
     are spread over <code>Zend/zend.h</code>,
-    <code>Zend/zend_operators.h</code> and <code>Zend/zend_API.h</code>.
+    <code>Zend/zend_operators.h</code> and <code>Zend/zend_API.h</code> and
+    will be discussed in the following chapters.
    </para>
   </section>
   <section xml:id="internals2.variables.creating">
