@@ -5,7 +5,7 @@
   <refname>mssql_data_seek</refname>
   <refpurpose>Moves internal row pointer</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -30,7 +30,7 @@
      <term><parameter>result_identifier</parameter></term>
      <listitem>
       <para>
-       The result resource that is being evaluated. 
+       The result resource that is being evaluated.
       </para>
      </listitem>
     </varlistentry>
@@ -38,7 +38,7 @@
      <term><parameter>row_number</parameter></term>
      <listitem>
       <para>
-       The desired row number of the new result pointer. 
+       The desired row number of the new result pointer.
       </para>
      </listitem>
     </varlistentry>
@@ -61,27 +61,24 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Connect to MSSQL
+// Connect to MSSQL and select the database
 $link = mssql_connect('MANGO\SQLEXPRESS', 'sa', 'phpfi');
 mssql_select_db('php', $link);
 
 // Select all people
 $result = mssql_query('SELECT [name], [age] FROM [persons] WHERE [age] >= 13');
 
-if(!$result)
-{
+if (!$result) {
     die('Query failed.');
 }
 
 // Select every 4th student in the results
-for($i = mssql_num_rows($result) - 1; $i % 4; $i++)
-{
-	if(!mssql_data_seek($result, $i))
-	{
-		continue;
-	}
-    
-	// Fetch the row ...
+for ($i = mssql_num_rows($result) - 1; $i % 4; $i++) {
+    if (!mssql_data_seek($result, $i)) {
+        continue;
+    }
+
+    // Fetch the row ...
 }
 
 // Free the query result
