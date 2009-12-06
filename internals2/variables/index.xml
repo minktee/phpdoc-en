@@ -76,13 +76,27 @@ struct _zval_struct {
     will be discussed in the following chapters.
    </para>
   </section>
+
   <section xml:id="internals2.variables.creating">
    <title>Creating variables and setting values</title>
    <para>
-    asdfjkl
+    
    </para>
   </section>
 
+  <section xml:id="internals2.variables.reading">
+   <title>Accessing variables</title>
+   <para>
+Z_STRVAL and friends, Z_TYPE, convert_to_* ....
+   </para>
+  </section>
+
+  <section xml:id="internals2.variables.arrays">
+   <title>Using arrays</title>
+   <para>
+
+   </para>
+  </section>
  </chapter>
  
  <!-- Keep this comment at the end of the file
